@@ -3,9 +3,7 @@ alert("Bienvenido al gestionador de pagos en cuotas con tarjeta de crédito")
 do {
     let precioproducto = parseInt(prompt("Ingrese el Precio del Producto que quiera comprar"))
     let cuotas = parseInt(prompt("Ingrese la cantidad de cuotas que quiera realizar su pago (1-3-6-12)"))
-    if (precioproducto !== ""){
-        break
-    } else {
+    if ((cuotas !== "") && (precioproducto !== "")) {
         switch (cuotas) {
 
             case 1:
@@ -28,14 +26,13 @@ do {
                 precioproducto = precioproducto.toFixed(2)
                 alert("Ah elegido el pagar en 12 sola cuota con un 50% de interés, pagará un total de " + precioproducto)
                 break
-            default:
-                alert("No ha ingresado un precio númerico o una cantidad de cuotas correctas")
-                break
+            }
+            utilizar = prompt("Ingrese \"SI\", si quiere utilizar el calculador nuevamente o \"NO\", si quiere terminar te utilizarlo")
+        } else {
+            alert("No ha ingresado un precio númerico o una cantidad de cuotas correctas")
+            break
         }
-    }
-        
-    utilizar = prompt("Ingrese \"SI\", si quiere utilizar el calculador nuevamente o \"NO\", si quiere terminar te utilizarlo")
-} while (utilizar !== "NO")
+        } while (utilizar !== "NO")
 
 /*
 if (cuotas==1){
