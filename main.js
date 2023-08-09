@@ -26,13 +26,16 @@ do {
                 precioproducto = precioproducto.toFixed(2)
                 alert("Ah elegido el pagar en 12 sola cuota con un 50% de interés, pagará un total de " + precioproducto)
                 break
-            }
-            utilizar = prompt("Ingrese \"SI\", si quiere utilizar el calculador nuevamente o \"NO\", si quiere terminar te utilizarlo")
-        } else {
-            alert("No ha ingresado un precio númerico o una cantidad de cuotas correctas")
-            break
+            default:
+                alert("No ha ingresado un precio númerico o una cantidad de cuotas correctas")
+                break
         }
-        } while (utilizar !== "NO")
+        utilizar = prompt("Ingrese \"SI\", si quiere utilizar el calculador nuevamente o \"NO\", si quiere terminar te utilizarlo")
+    } else {
+        alert("No ha ingresado un precio númerico o una cantidad de cuotas correctas")
+        break
+    }
+} while (utilizar !== "NO")
 
 /*
 if (cuotas==1){
